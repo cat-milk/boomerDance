@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div(id="head")
+    p(id="title")
+      b Boomer Dance
+  div(id='cum')
+    div(id='boomerContainmentDiv')
+      img(id='boomer' src='./images/boomerDance.gif')
+
+
+    div(id='feet')
+      audio(autoplay='' id='audioPlayer')
+        source(src=`./Audio/${trackList[0]}`, type='audio/mpeg')
+      div(id='playerControls')
+        img(src='./images/angle-left.svg' class='controlButton' id='backButton')
+        img(src='./images/play.svg' class='controlButton' id='playButton')
+        img(src='./images/angle-right.svg' class='controlButton' id='forwardButton')
+      p(id='trackName') Now Playing:
+        b #{trackList[0].substring(0,trackList[0].length-5)}
+
